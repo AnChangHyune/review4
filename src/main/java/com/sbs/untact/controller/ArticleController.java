@@ -1,12 +1,15 @@
 package com.sbs.untact.controller;
 
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.sbs.untact.dto.Article;
+import com.sbs.untact.dto.Board;
 import com.sbs.untact.dto.ResultData;
 import com.sbs.untact.service.ArticleService;
 
@@ -15,6 +18,18 @@ public class ArticleController {
 	@Autowired
 	private ArticleService articleService;
 	
+	@RequestMapping("/mpaUsr/article/list")
+	public String showList(HttpServletRequest req, int boardId) {
+		Board board = articleService.getBoardById(boardId);
+		
+		if(board == null) {
+			return "존재하지 않는 게시판 입니다.";
+		}
+		
+		req.setAttribute("board", board);
+		
+		return "mpaUsr/article/list";
+	}
 	
 	@RequestMapping("/usr/article/doAdd")
 	@ResponseBody

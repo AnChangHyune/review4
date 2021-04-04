@@ -4,6 +4,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import com.sbs.untact.dto.Article;
+import com.sbs.untact.dto.Board;
 
 @Mapper
 public interface ArticleDao {
@@ -15,6 +16,8 @@ public interface ArticleDao {
 	Article getArticleById(@Param(value = "id") int id);
 
 	void addArticle(@Param("boardId") int boardId, @Param("memberId") int memberId, @Param("title") String title, @Param("body") String body);
+
+	Board getBoardById(@Param(value = "id") int id);
 
 	
 }

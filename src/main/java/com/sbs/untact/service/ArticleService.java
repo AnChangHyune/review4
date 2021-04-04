@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.sbs.untact.dao.ArticleDao;
 import com.sbs.untact.dto.Article;
+import com.sbs.untact.dto.Board;
 import com.sbs.untact.dto.ResultData;
 
 
@@ -50,5 +51,19 @@ public class ArticleService {
 		int id = 1; // 가짜 데이터
 
 		return new ResultData("S-1", "게시물이 작성되었습니다.", "id", id);
+	}
+
+	public Board getBoardById(int id) {
+		return articleDao.getBoardById(id);
+	}
+	
+	private boolean isEmpty(Article article) {
+		if (article == null) {
+			return true;
+		} else if (article.isDelStatus()) {
+			return true;
+		}
+
+		return false;
 	}
 }
