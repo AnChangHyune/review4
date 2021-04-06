@@ -1,4 +1,4 @@
-/* 폰트적용 - 시작 */
+/* �룿�듃�쟻�슜 - �떆�옉 */
 @font-face {
   font-family: "LotteMartDream";
   font-style: normal;
@@ -32,9 +32,9 @@
 html > body {
   font-family: "LotteMartDream", sans-serif;
 }
-/* 폰트적용 - 끝 */
+/* �룿�듃�쟻�슜 - �걹 */
 
-/* 유틸 - 시작 */
+/* �쑀�떥 - �떆�옉 */
 .row-span-7 {
   grid-row: span 7 / span 7;
 }
@@ -161,16 +161,16 @@ html > body .plain-link:hover {
   -webkit-line-clamp: 4;
 }
 
-/* 유틸 - 끝 */
+/* �쑀�떥 - �걹 */
 
-/* 기타 - 시작 */
+/* 湲고� - �떆�옉 */
 .component-title-bar {
   border: solid black;
   border-width: 2px 0;
   margin-top: 20px;
   margin-bottom: 10px;
 }
-/* 기타 - 끝 */
+/* 湲고� - �걹 */
 
 @media (max-width: 640px) {
   .sm\:col-span-3 {
@@ -179,7 +179,7 @@ html > body .plain-link:hover {
 }
 
 
-/* 탑바 시작 */
+/* �깙諛� �떆�옉 */
 :root {
   --top-bar__color-1:#f1f1f1;
 }
@@ -187,7 +187,6 @@ html > body .plain-link:hover {
 .top-bar {
   /* .bg-white */
   background-color:white;
-  
   /* .shadow-lg */
   --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -199,21 +198,22 @@ box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #
   padding-top: 4rem;
 }
 
-/* 탑바 - 메뉴 박스 시작 */
+/* �깙諛� - 硫붾돱 諛뺤뒪 �떆�옉 */
 .top-bar .menu-box-1 {
   overflow-x:auto;
 }
 
-/* 탑바 - 메뉴 박스 - 터치 불가능한 경우 스크롤바 제거 */
+/* �깙諛� - 硫붾돱 諛뺤뒪 - �꽣移� 遺덇��뒫�븳 寃쎌슦 �뒪�겕濡ㅻ컮 �젣嫄� */
 .touch-imposible .menu-box-1::-webkit-scrollbar
 {
   width: 0;
   height: 0;
 }
 
-/* 탑바 - 메뉴 박스 - 더보기 그림자 시작 */
+/* �깙諛� - 硫붾돱 諛뺤뒪 - �뜑蹂닿린 洹몃┝�옄 �떆�옉 */
 .top-bar .container {
   position:relative;
+  margin-bottom:50px;
 }
 
 .top-bar .container::after {
@@ -226,9 +226,9 @@ box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #
   background-image:linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1));
   pointer-events:none;
 }
-/* 탑바 - 메뉴 박스 - 더보기 그림자 끝 */
+/* �깙諛� - 硫붾돱 諛뺤뒪 - �뜑蹂닿린 洹몃┝�옄 �걹 */
 
-/* 탑바 - 메뉴 박스 - 아이템 시작 */
+/* �깙諛� - 硫붾돱 諛뺤뒪 - �븘�씠�뀥 �떆�옉 */
 .top-bar .menu-box-1 ul > li > a > span {
   white-space:nowrap;
 }
@@ -236,9 +236,9 @@ box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #
 .top-bar .menu-box-1 ul > li:hover > a {
   background-color:var(--top-bar__color-1);
 }
-/* 탑바 - 메뉴 박스 - 아이템 끝 */
+/* �깙諛� - 硫붾돱 諛뺤뒪 - �븘�씠�뀥 �걹 */
 
-/* 탑바 - 메뉴 박스 - 2차 메뉴 시작 */
+/* �깙諛� - 硫붾돱 諛뺤뒪 - 2李� 硫붾돱 �떆�옉 */
 .top-bar .menu-box-1 > ul > li:hover > div {
   display:block;
 }
@@ -268,7 +268,7 @@ box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #
   justify-content:center;
   padding:.5rem 0;
 }
-/* 탑바 - 메뉴 박스 - 2차 메뉴 끝 */
+/* �깙諛� - 硫붾돱 諛뺤뒪 - 2李� 硫붾돱 �걹 */
 
 .top-bar--fly {
   top:0;
@@ -276,4 +276,54 @@ box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #
   width:100%;
   z-index:50;
   position:fixed;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  transition: background-color .5s;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 80;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+  margin-top:50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
